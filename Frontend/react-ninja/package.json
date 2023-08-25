@@ -1,4 +1,5 @@
 {
+  "proxy": "http://localhost:4040/api/activity",
   "name": "react-ninja",
   "private": true,
   "version": "0.0.0",

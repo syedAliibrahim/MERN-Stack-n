@@ -2,8 +2,8 @@ const  Activity=require('../model/activityModel');
 const mongoose = require('mongoose')
 
 //get all activiety
-const getActivitys =async(req,res)=>{
-    const activity=await Activity.find({}).sort({createdAt: -1})
+const getActivitys = async (req,res)=>{
+    const activity= await Activity.find({}).sort({createdAt: -1})
     res.status(200).json(activity)
 }
 //get single activity
@@ -21,9 +21,9 @@ const getActivity =async(req,res)=>{
 
 //create new post 
 const createActivity =async(req,res)=>{
-const { act,description,activityType,dur,date} = req.body
+const { activityTitle,description,activityType,duration,date} = req.body
     try {
-    const activity = await Activity.create({act, description,activityType,dur,date})
+    const activity = await Activity.create({activityTitle, description,activityType,duration,date})
     console.log(activity)
         res.status(200).json(activity)
       }catch(error){

@@ -4,7 +4,7 @@ const Schema =mongoose.Schema
 
 const activitySchem =new Schema({
    
-    act:{
+    activityTitle:{
         type:String,
         required: true
     },
@@ -16,7 +16,7 @@ const activitySchem =new Schema({
         type:String,
         required: true
     },
-    dur:{
+    duration:{
         type:String,
         required: true
     },
